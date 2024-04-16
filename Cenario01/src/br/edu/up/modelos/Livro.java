@@ -3,7 +3,7 @@ package br.edu.up.modelos;
 public class Livro {
     public String codigo;
     public String titulo;
-    public String[] autores;
+    public String autores;
     public String isbn;
     public int anoLivro;
 
@@ -19,10 +19,10 @@ public class Livro {
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
-    public String[] getAutores() {
+    public String getAutores() {
         return autores;
     }
-    public void setAutores(String[] autores) {
+    public void setAutores(String autores) {
         this.autores = autores;
     }
     public String getIsbn() {
