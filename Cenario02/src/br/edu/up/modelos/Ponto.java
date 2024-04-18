@@ -3,26 +3,14 @@ package br.edu.up.modelos;
 public class Ponto {
     public double x;
     public double  y;
-    
-    public double getX() {
-        return x;
-    }
-    public void setX(double x) {
+
+    public Ponto(double x, double y) {
         this.x = x;
-    }
-    public double getY() {
-        return y;
-    }
-    public void setY(double y) {
         this.y = y;
     }
 
-    public double calcularDistania(Ponto ponto1, Ponto ponto2 ){
-        double distancia = Math.pow(Math.sqrt(ponto1.x - ponto2.x), 2) 
-        + Math.pow(Math.sqrt(ponto1.y - ponto2.y), 2);
-
-        return distancia;
+    public double calcularDistancia(Ponto ponto2) {
+        return Math.sqrt(Math.pow(ponto2.x - this.x, 2) + Math.pow(ponto2.y - this.y, 2));
     }
-
-    
 }
+
