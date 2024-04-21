@@ -20,9 +20,8 @@ public class Programa {
         livro2.isbn = "0130341517";
         livro2.anoLivro = 2015;
 
-        System.out.println(livro1.codigo + "\n" + livro1.titulo + "\n" + livro1.autores + "\n" + livro1.isbn + "\n" + livro1.anoLivro);
-        System.out.println();
-        System.out.println(livro2.codigo + "\n" + livro2.titulo + "\n" + livro2.autores + "\n" + livro2.isbn + "\n" + livro2.anoLivro);
+        livro1.impressao();
+        livro2.impressao();
     }
     
 }

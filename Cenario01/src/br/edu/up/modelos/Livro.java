@@ -38,5 +38,17 @@ public class Livro {
         this.anoLivro = anoLivro;
     }
 
+    public String impressao(){
+        System.out.println("--------------Livro--------------");
+        System.out.println("Código: " + codigo);
+        System.out.println("Título: " + titulo);
+        System.out.println("Autores: " + autores);
+        System.out.println("ISBN: " + isbn);
+        System.out.println("Ano: " + anoLivro);
+        System.out.println("---------------------------------");
+   
+        return null;
+    }
+
     
 }
