@@ -1,5 +1,8 @@
 package br.edu.up.modelos;
 
+import br.edu.up.Prompt;
+
+
 public class Livro {
     public String codigo;
     public String titulo;
@@ -39,13 +42,13 @@ public class Livro {
     }
 
     public String impressao(){
-        System.out.println("--------------Livro--------------");
-        System.out.println("Código: " + codigo);
-        System.out.println("Título: " + titulo);
-        System.out.println("Autores: " + autores);
-        System.out.println("ISBN: " + isbn);
-        System.out.println("Ano: " + anoLivro);
-        System.out.println("---------------------------------");
+        Prompt.imprimir("--------------Livro--------------");
+        Prompt.imprimir("Código: " + codigo);
+        Prompt.imprimir("Título: " + titulo);
+        Prompt.imprimir("Autores: " + autores);
+        Prompt.imprimir("ISBN: " + isbn);
+        Prompt.imprimir("Ano: " + anoLivro);
+        Prompt.imprimir("---------------------------------");
    
         return null;
     }
