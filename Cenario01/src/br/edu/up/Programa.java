@@ -7,14 +7,14 @@ import br.edu.up.modelos.Livro;
 public class Programa {
     public static void main(String[] args) {
         Livro livro1 = new Livro();
-        livro1.codigo = "1598FHK";
-        livro1.titulo = "Core Java 2";
-        livro1.autores = "Cay S. Horstmann e Gary Cornell";
-        livro1.isbn = "013081   9336";
-        livro1.anoLivro = 2005;
+        livro1.setCodigo("1598FHK");
+        livro1.setTitulo("Core Java 2");
+        livro1.setAutores("Cay S. Horstmann e Gary Cornell");
+        livro1.setIsbn("0130819336");
+        livro1.setAnoLivro(2005);
 
         Livro livro2 = new Livro();
-        livro2.codigo = "9865PLO";
+        livro2.setCodigo("1598FHK");
         livro2.titulo = "Java, Como programar";
         livro2.autores = "Harvey Deitel";
         livro2.isbn = "0130341517";
