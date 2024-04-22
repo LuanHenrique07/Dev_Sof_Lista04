@@ -12,14 +12,14 @@ public class Programa {
         // Pedido 3 
         double d1 = ponto1.calcularDistancia(ponto2);
 
-        System.out.println("A distancia entre o ponto1 e o ponto2 eh: " + d1);
+        Prompt.imprimir("A distancia entre o ponto1 e o ponto2 é: " + d1);
 
         // Pedido 4
         Ponto ponto3 = new Ponto(7, 2);
 
         double d2 = ponto2.calcularDistancia(ponto3);
 
-        System.out.println("A distancia entre o ponto2 e o ponto3 eh: " + d2);
+        Prompt.imprimir("A distancia entre o ponto2 e o ponto3 é: " + d2);
 
         // Pedidos 5 e 6
         ponto1.setX(10);
@@ -27,7 +27,7 @@ public class Programa {
 
         double d3 = ponto1.calcularDistancia(ponto2);
 
-        System.out.println("A distancia entre o ponto1 alterado e o ponto2 eh: " + d3);
+        Prompt.imprimir("A distancia entre o ponto1 alterado e o ponto2 é: " + d3);
 
     }
 }
