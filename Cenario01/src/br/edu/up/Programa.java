@@ -15,10 +15,10 @@ public class Programa {
 
         Livro livro2 = new Livro();
         livro2.setCodigo("1598FHK");
-        livro2.titulo = "Java, Como programar";
-        livro2.autores = "Harvey Deitel";
-        livro2.isbn = "0130341517";
-        livro2.anoLivro = 2015;
+        livro2.setTitulo("Java, Como programar");
+        livro2.setAutores("Harvey Deitel"); 
+        livro2.setIsbn("0130341517");
+        livro2.setAnoLivro(2015);
 
         livro1.impressao();
         livro2.impressao();
