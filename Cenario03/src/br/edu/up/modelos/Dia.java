@@ -8,37 +8,24 @@ import br.edu.up.Prompt;
 
 public class Dia {
     public int diaMes;
-    public Compromisso[] compromissos;
-    public static List<Compromisso> listaCompro = new ArrayList<>();
+    public List<Compromisso> compromissos;
 
     public Dia(int diaMes){
         this.diaMes = diaMes;
+        this.compromissos = new ArrayList<>();
     }
 
     public void adicionarCompromisso(Compromisso comp){
-        this.listaCompro.add(comp);
-    }
-    
-    public static void consultarCompromisso(int hora){
-        for ( var compromisso : listaCompro) {
-            Prompt.imprimir(compromisso);
-        }
+        compromissos.add(comp);
     }
 
     public void excluirCompromisso(int hora){
-        
+        compromissos.removeIf(compromisso -> compromisso.hora == hora);
     }
 
-    public static void listarCompromissos(){
+    public void listarCompromissos(){
+        for (Compromisso comp : compromissos) {
+            Prompt.imprimir(comp.pessoa + " - " + comp.local + " - " + comp.assunto + " - " + comp.hora);
+        }
     }
-
-    public static List<Compromisso> getListaCompro() {
-        return listaCompro;
-    }
-
-    public void setListaCompro(List<Compromisso> listaCompro) {
-        this.listaCompro = listaCompro;
-    } 
-    
-
 }
