@@ -19,12 +19,6 @@ public class Programa {
         mesVolei.adicionarCompromisso(volei, 30);
         mesVolei.listaCompromissos();
 
-        
-
-
-        
-    
-
 
     }
 }

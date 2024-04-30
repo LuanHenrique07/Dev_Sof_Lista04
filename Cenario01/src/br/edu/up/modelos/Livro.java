@@ -2,13 +2,12 @@ package br.edu.up.modelos;
 
 import br.edu.up.Prompt;
 
-
 public class Livro {
-    public String codigo;
-    public String titulo;
-    public String autores;
-    public String isbn;
-    public int anoLivro;
+    private String codigo;
+    private String titulo;
+    private String autores;
+    private String isbn;
+    private int anoLivro;
 
     public String getCodigo() {
         return codigo;
