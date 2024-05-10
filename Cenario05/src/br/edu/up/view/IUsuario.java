@@ -1,12 +1,12 @@
 package view;
 
-import br.edu.up.Prompt;
+import br.edu.up.*;
 import model.Evento;
 import model.Reserva;
 
 public class IUsuario {
 
-        public void mostrarMenu() {
+    public void mostrarMenu() {
         Prompt.imprimir("1. Adicionar evento");
         Prompt.imprimir("2. Listar eventos");
         Prompt.imprimir("3. Adicionar reserva");
