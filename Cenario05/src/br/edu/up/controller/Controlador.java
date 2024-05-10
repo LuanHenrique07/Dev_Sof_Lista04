@@ -1,21 +1,20 @@
-package controller;
+package br.edu.up.controller;
 
-import br.edu.up.Prompt;
-import model.Evento;
-import model.Reserva;
-import view.IUsuario;
+import br.edu.up.model.*;
+import br.edu.up.view.*;
+import br.edu.up.*;
 
 public class Controlador {
-    private static final int MAX_EVENTOS = 100;
-    private static final int MAX_RESERVAS = 100;
-    private Evento[] eventos = new Evento[MAX_EVENTOS];
-    private Reserva[] reservas = new Reserva[MAX_RESERVAS];
+    private static final int maxEventos = 100;
+    private static final int maxReservas = 100;
+    private Evento[] eventos = new Evento[maxEventos];
+    private Reserva[] reservas = new Reserva[maxReservas];
     private int numEventos = 0;
     private int numReservas = 0;
     private IUsuario view = new IUsuario();
 
     public void adicionarEvento(Evento evento) {
-        if (numEventos < MAX_EVENTOS) {
+        if (numEventos < maxEventos) {
             eventos[numEventos++] = evento;
         } else {
             Prompt.imprimir("Limite máximo de eventos atingido.");
@@ -29,7 +28,7 @@ public class Controlador {
     }
 
     public void adicionarReserva(Reserva reserva) {
-        if (numReservas < MAX_RESERVAS) {
+        if (numReservas < maxReservas) {
             reservas[numReservas++] = reserva;
         } else {
             Prompt.imprimir("Limite máximo de reservas atingido.");
@@ -45,8 +44,7 @@ public class Controlador {
     public void iniciar() {
         while (true) {
             view.mostrarMenu();
-            Prompt.lerLinha("Escolha uma opção: ");
-            String opcao = scanner.nextLine();
+            String opcao = Prompt.lerLinha("Escolha uma opção: ");
 
             switch (opcao) {
                 case "1":
@@ -65,8 +63,7 @@ public class Controlador {
                     break;
 
                 case "3":
-                    Prompt.lerLinha("Nome do evento da reserva: ");
-                    String nomeEvento = scanner.nextLine();
+                    String nomeEvento = Prompt.lerLinha("Nome do evento da reserva: ");
                     Evento eventoReserva = null;
                     for (int i = 0; i < numEventos; i++) {
                         if (eventos[i].getNome().equals(nomeEvento)) {
@@ -75,14 +72,12 @@ public class Controlador {
                         }
                     }
                     if (eventoReserva != null) {
-                        Prompt.lerLinha("Responsável pela reserva: ");
-                        String responsavel = scanner.nextLine();
-                        Prompt.lerLinha("Quantidade de pessoas: ");
-                        int quantidadePessoas = Integer.parseInt(scanner.nextLine());
-                        Prompt.lerLinha("Data da reserva: ");
-                        String dataReserva = scanner.nextLine();
+                        String responsavel = Prompt.lerLinha("Responsável pela reserva: ");
+                        int quantidadePessoas = Prompt.lerInteiro("Quantidade de pessoas: ");
+                        String dataReserva = Prompt.lerLinha("Data da reserva: ");
                         double valorTotal = eventoReserva.getPrecoIngresso() * quantidadePessoas;
-                        Reserva reserva = new Reserva(eventoReserva, responsavel, quantidadePessoas, dataReserva, valorTotal);
+                        Reserva reserva = new Reserva(eventoReserva, responsavel, quantidadePessoas, dataReserva,
+                                valorTotal);
                         adicionarReserva(reserva);
                     } else {
                         Prompt.imprimir("Evento não encontrado.");
@@ -102,5 +97,4 @@ public class Controlador {
             }
         }
     }
-}
 }

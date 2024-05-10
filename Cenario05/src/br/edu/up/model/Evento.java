@@ -1,5 +1,3 @@
-package model;
-
 public class Evento {
 
     protected String Nome;
