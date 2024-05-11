@@ -1,7 +1,7 @@
-package br.edu.up.controller;
+package br.edu.up.Controller;
 
 import br.edu.up.model.*;
-import br.edu.up.view.*;
+import br.edu.up.View.*;
 import br.edu.up.*;
 
 public class Controlador {

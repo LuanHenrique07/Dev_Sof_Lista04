@@ -1,3 +1,5 @@
+package br.edu.up.model;
+
 public class Evento {
 
     protected String Nome;

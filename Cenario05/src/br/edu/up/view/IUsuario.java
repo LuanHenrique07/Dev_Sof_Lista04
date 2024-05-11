@@ -1,8 +1,7 @@
-package view;
+package br.edu.up.View;
 
 import br.edu.up.*;
-import model.Evento;
-import model.Reserva;
+import br.edu.up.model.*;;
 
 public class IUsuario {
 

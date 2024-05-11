@@ -1,4 +1,5 @@
-package model;
+package br.edu.up.model;
+
 
 public class Reserva {
     private Evento evento;

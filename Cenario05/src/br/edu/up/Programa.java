@@ -1,12 +1,10 @@
-import br.edu.up.controller.Controlador;
-import br.edu.up.controllers.*;
-import br.edu.up.view.*;
+package br.edu.up;
+
+import br.edu.up.Controller.*;
 
 public class Programa {
-    public static void main(String[] args) throws Exception {
-
+    public static void main(String[] args) {
         Controlador controlador = new Controlador();
-        IUsuario iUsuario = new IUsuario(controlador);
-        iUsuario.exibirMenu();
+        controlador.iniciar();
     }
 }
