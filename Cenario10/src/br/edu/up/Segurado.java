@@ -1,8 +1,9 @@
+package br.edu.up;
+
 public class Segurado {
     private String Nome;
     private String Rg;
     private String Cpf;
-    // enum sexo;
     private String Telefone;
     private String Endereco;
     private String Cep;
@@ -64,4 +65,9 @@ public class Segurado {
         Cidade = cidade;
     }
 
+    @Override
+    public String toString() {
+        return "Segurado [Nome=" + Nome + ", Rg=" + Rg + ", Cpf=" + Cpf + ", Telefone=" + Telefone + ", Endereco="
+                + Endereco + ", Cep=" + Cep + ", Cidade=" + Cidade + "]";
+    }
 }
