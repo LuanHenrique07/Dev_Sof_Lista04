@@ -1,6 +1,8 @@
+package br.edu.up.model;
+
 public class Comercial extends Contato {
 
-    public String Cnpj;
+    private String Cnpj;
 
     public Comercial(int codigo, String nome, String telefone, String cnpj) {
         super(codigo, nome, telefone);

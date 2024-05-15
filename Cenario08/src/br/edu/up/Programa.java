@@ -1,5 +1,9 @@
+package br.edu.up;
+
+import br.edu.up.controller.Controller;
+
 public class Programa {
-    public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+    public void executar() {
+        Controller.main(null);
     }
 }

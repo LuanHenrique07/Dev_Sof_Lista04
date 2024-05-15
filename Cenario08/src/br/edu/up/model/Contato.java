@@ -1,3 +1,5 @@
+package br.edu.up.model;
+
 public abstract class Contato {
 
     private int Codigo;
@@ -33,4 +35,10 @@ public abstract class Contato {
     public void setTelefone(String telefone) {
         Telefone = telefone;
     }
+
+    @Override
+    public String toString() {
+        return "Contato [Codigo = " + Codigo + ", Nome = " + Nome + ", Telefone = " + Telefone + "]";
+    }
+
 }

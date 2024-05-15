@@ -1,6 +1,8 @@
+package br.edu.up.model;
+
 public class Pessoal extends Contato {
 
-    public String Aniversario;
+    private String Aniversario;
 
     public Pessoal(int codigo, String nome, String telefone, String aniversario) {
         super(codigo, nome, telefone);
