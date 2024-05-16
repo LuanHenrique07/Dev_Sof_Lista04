@@ -1,4 +1,4 @@
-package br.edu.up;
+package br.edu.up.model;
 
 public class Cidade {
     private String Nome;
@@ -22,7 +22,7 @@ public class Cidade {
 
     @Override
     public String toString() {
-        return "Cidade [Nome=" + Nome + ", UF=" + UF + "]";
+        return "Cidade [Nome = " + Nome + ", UF = " + UF + "]";
     }
 
 }

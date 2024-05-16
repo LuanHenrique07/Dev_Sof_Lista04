@@ -1,4 +1,4 @@
-package br.edu.up;
+package br.edu.up.model;
 
 public class Endereco {
     private String Rua;

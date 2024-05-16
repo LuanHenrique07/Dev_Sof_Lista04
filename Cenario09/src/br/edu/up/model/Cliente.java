@@ -1,4 +1,4 @@
-package br.edu.up;
+package br.edu.up.model;
 
 public abstract class Cliente {
     private String Nome;
@@ -7,17 +7,14 @@ public abstract class Cliente {
     private double VlrMaxCredito;
     private double VlrEmprestado;
 
-    public double emprestar() {
-        return VlrEmprestado;
-        // if(VlrEmprestado > ){
-
-        // }
+    public Cliente(double VlrMaxCredito) {
+        this.VlrMaxCredito = VlrMaxCredito;
+        this.VlrEmprestado = 0.0;
     }
 
-    public double devolver() {
-        return VlrEmprestado;
+    public abstract double emprestar(double valor);
 
-    }
+    public abstract double devolver(double valor);
 
     public double getSaldo() {
         return VlrEmprestado;
@@ -27,40 +24,35 @@ public abstract class Cliente {
         return Nome;
     }
 
-    public void setNome(String nome) {
-        Nome = nome;
+    public void setNome(String Nome) {
+        this.Nome = Nome;
     }
 
     public String getTelefone() {
         return Telefone;
     }
 
-    public void setTelefone(String telefone) {
-        Telefone = telefone;
+    public void setTelefone(String Telefone) {
+        this.Telefone = Telefone;
     }
 
     public String getEmail() {
         return Email;
     }
 
-    public void setEmail(String email) {
-        Email = email;
+    public void setEmail(String Email) {
+        this.Email = Email;
     }
 
     public double getVlrMaxCredito() {
         return VlrMaxCredito;
     }
 
-    public void setVlrMaxCredito(double vlrMaxCredito) {
-        VlrMaxCredito = vlrMaxCredito;
-    }
-
     public double getVlrEmprestado() {
         return VlrEmprestado;
     }
 
-    public void setVlrEmprestado(double vlrEmprestado) {
-        VlrEmprestado = vlrEmprestado;
+    protected void setVlrEmprestado(double VlrEmprestado) {
+        this.VlrEmprestado = VlrEmprestado;
     }
-
 }
