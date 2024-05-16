@@ -1,15 +1,8 @@
 package br.edu.up.view;
 
-import java.util.Scanner;
-
 import br.edu.up.Prompt;
 
 public class View {
-    private Scanner scanner;
-
-    public View() {
-        scanner = new Scanner(System.in);
-    }
 
     public int exibirMenu() {
         Prompt.imprimir("Menu:");
@@ -19,37 +12,26 @@ public class View {
         Prompt.imprimir("4. Consultar um contato pelo código");
         Prompt.imprimir("5. Listar todos os contatos");
         Prompt.imprimir("6. Sair do programa");
-        Prompt.imprimir("Escolha uma opção: ");
-        return scanner.nextInt();
+        return Prompt.lerInteiro("Escolha uma das opçoes para prosseguir: ");
     }
 
     public int lerCodigo() {
-        Prompt.imprimir("Digite o código do contato: ");
-        return scanner.nextInt();
+        return Prompt.lerInteiro("Digite o código do contato: ");
     }
 
     public String lerNome() {
-        Prompt.imprimir("Digite o nome do contato: ");
-        scanner.nextLine();
-        return scanner.nextLine();
+        return Prompt.lerLinha("Digite o nome do contato: ");
     }
 
     public String lerTelefone() {
-        Prompt.imprimir("Digite o telefone do contato: ");
-        return scanner.nextLine();
+        return Prompt.lerLinha("Digite o telefone do contato: ");
     }
 
     public String lerAniversario() {
-        Prompt.imprimir("Digite o aniversário (DD/MM/YYYY): ");
-        return scanner.nextLine();
+        return Prompt.lerLinha("Digite o aniversário (DD/MM/YYYY): ");
     }
 
     public String lerCnpj() {
-        Prompt.imprimir("Digite o CNPJ do contato comercial: ");
-        return scanner.nextLine();
-    }
-
-    public void fecharScanner() {
-        scanner.close();
+        return Prompt.lerLinha("Digite o CNPJ do contato comercial: ");
     }
 }

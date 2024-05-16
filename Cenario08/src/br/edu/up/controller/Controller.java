@@ -48,13 +48,11 @@ public class Controller {
                     Prompt.imprimir(agenda.listarContatos());
                     break;
                 case 6:
-                    Prompt.imprimir("Saindo...");
+                    Prompt.imprimir("Programa finalizado");
                     break;
                 default:
-                    Prompt.imprimir("Opção inválida. Por favor, escolha uma opção válida.");
+                    Prompt.imprimir("Opção inválida. Por favor, escolha uma opçao válida.");
             }
         } while (opcao != 6);
-
-        menu.fecharScanner();
     }
 }
