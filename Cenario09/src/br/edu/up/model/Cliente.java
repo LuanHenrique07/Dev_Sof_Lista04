@@ -1,11 +1,15 @@
 package br.edu.up.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Cliente {
     private String Nome;
     private String Telefone;
     private String Email;
     private double VlrMaxCredito;
     private double VlrEmprestado;
+    private static List<Cliente> clientes = new ArrayList<>();
 
     public Cliente(double VlrMaxCredito) {
         this.VlrMaxCredito = VlrMaxCredito;
@@ -54,5 +58,13 @@ public abstract class Cliente {
 
     protected void setVlrEmprestado(double VlrEmprestado) {
         this.VlrEmprestado = VlrEmprestado;
+    }
+
+    public static void adicionarCliente(Cliente cliente) {
+        clientes.add(cliente);
+    }
+
+    public static List<Cliente> getClientes() {
+        return clientes;
     }
 }

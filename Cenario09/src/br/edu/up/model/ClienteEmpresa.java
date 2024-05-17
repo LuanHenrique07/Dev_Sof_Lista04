@@ -7,6 +7,7 @@ public class ClienteEmpresa extends Cliente {
 
     public ClienteEmpresa() {
         super(25000.0);
+        Cliente.adicionarCliente(this);
     }
 
     @Override
@@ -25,7 +26,7 @@ public class ClienteEmpresa extends Cliente {
             setVlrEmprestado(getVlrEmprestado() - valor);
             return getVlrEmprestado();
         } else {
-            return -1; 
+            return -1;
         }
     }
 
@@ -55,8 +56,8 @@ public class ClienteEmpresa extends Cliente {
 
     @Override
     public String toString() {
-        return "ClienteEmpresa [nome = " + getNome() + ", telefone = " + getTelefone() + ", email = " + getEmail() +
-               ", Cnpj = " + Cnpj + ", InscEstadual = " + InscEstadual + ", AnoFundacao = " + AnoFundacao + 
-               ", saldo = " + getSaldo() + "]";
+        return "ClienteEmpresa [nome=" + getNome() + ", telefone=" + getTelefone() + ", email=" + getEmail() +
+                ", Cnpj=" + Cnpj + ", InscEstadual=" + InscEstadual + ", AnoFundacao=" + AnoFundacao +
+                ", saldo=" + getSaldo() + "]";
     }
 }
