@@ -1,15 +1,15 @@
 package br.edu.up.model;
 
 public class Aluno extends Pessoa {
-
     private int AnoIngresso;
     private String NomeCurso;
     private String Turno;
 
-    public Aluno(String Nome, String Rg, String Matricula, int anoIngresso, String nomeCurso, String turno) {
-        AnoIngresso = anoIngresso;
-        NomeCurso = nomeCurso;
-        Turno = turno;
+    public Aluno(String nome, String rg, String matricula, int anoIngresso, String nomeCurso, String turno) {
+        super(nome, rg, matricula);
+        this.AnoIngresso = anoIngresso;
+        this.NomeCurso = nomeCurso;
+        this.Turno = turno;
     }
 
     public int getAnoIngresso() {
@@ -17,7 +17,7 @@ public class Aluno extends Pessoa {
     }
 
     public void setAnoIngresso(int anoIngresso) {
-        AnoIngresso = anoIngresso;
+        this.AnoIngresso = anoIngresso;
     }
 
     public String getNomeCurso() {
@@ -25,7 +25,7 @@ public class Aluno extends Pessoa {
     }
 
     public void setNomeCurso(String nomeCurso) {
-        NomeCurso = nomeCurso;
+        this.NomeCurso = nomeCurso;
     }
 
     public String getTurno() {
@@ -33,6 +33,6 @@ public class Aluno extends Pessoa {
     }
 
     public void setTurno(String turno) {
-        Turno = turno;
+        this.Turno = turno;
     }
 }

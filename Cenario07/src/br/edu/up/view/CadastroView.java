@@ -1,8 +1,8 @@
-package br.edu.up.view;
+package br.edu.up.View;
 
 import java.util.List;
 import java.util.Scanner;
-import br.edu.up.*;
+import br.edu.up.Prompt;
 import br.edu.up.model.Aluno;
 import br.edu.up.model.Professor;
 
@@ -15,21 +15,22 @@ public class CadastroView {
 
     public int exibirMenu() {
         Prompt.imprimir("1 - Cadastrar professor");
-        Prompt.imprimir("2 - Listar professores");
-        Prompt.imprimir("3 - Excluir professor");
-        Prompt.imprimir("4 - Sair");
+        Prompt.imprimir("2 - Cadastrar aluno");
+        Prompt.imprimir("3 - Listar professores");
+        Prompt.imprimir("4 - Listar alunos");
+        Prompt.imprimir("5 - Excluir professor");
+        Prompt.imprimir("6 - Excluir aluno");
+        Prompt.imprimir("7 - Sair");
         Prompt.imprimir("Escolha uma opção: ");
         return scanner.nextInt();
     }
 
     public Professor cadastrarProfessor() {
-        Prompt.imprimir("");
-        String nome = Prompt.lerLinha("Nome: ");
+        String nome = Prompt.lerLinha("Nome do professor: ");
         String rg = Prompt.lerLinha("RG: ");
         String matricula = Prompt.lerLinha("Matrícula: ");
         String lattesId = Prompt.lerLinha("Lattes ID: ");
         String titulacao = Prompt.lerLinha("Titulação: ");
-
         return new Professor(nome, rg, matricula, lattesId, titulacao);
     }
 
@@ -51,12 +52,21 @@ public class CadastroView {
         int anoIngresso = Prompt.lerInteiro("Ano de ingresso: ");
         String curso = Prompt.lerLinha("Curso: ");
         String turno = Prompt.lerLinha("Turno: ");
-
         return new Aluno(nome, rg, matricula, anoIngresso, curso, turno);
     }
 
-    public String getNomeExcluir() {
-        Prompt.imprimir("Digite o nome do professor que deseja excluir: ");
-        return scanner.nextLine();
+    public void listarAlunos(List<Aluno> alunos) {
+        for (Aluno aluno : alunos) {
+            Prompt.imprimir("Nome: " + aluno.getNome() +
+                           ", RG: " + aluno.getRg() +
+                           ", Matrícula: " + aluno.getMatricula() +
+                           ", Ano de Ingresso: " + aluno.getAnoIngresso() +
+                           ", Nome do Curso: " + aluno.getNomeCurso() +
+                           ", Turno: " + aluno.getTurno());
+        }
+    }
+
+    public String getNomeExcluir(String tipo) {
+        return Prompt.lerLinha("Digite o nome do " + tipo + " que deseja excluir: ");
     }
 }

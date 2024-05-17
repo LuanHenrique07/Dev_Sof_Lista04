@@ -2,7 +2,6 @@ package br.edu.up.model;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 public class Disciplina {
 
