@@ -7,6 +7,7 @@ public class ClientePessoa extends Cliente {
 
     public ClientePessoa() {
         super(10000.0);
+        Cliente.adicionarCliente(this);
     }
 
     @Override
@@ -15,7 +16,7 @@ public class ClientePessoa extends Cliente {
             setVlrEmprestado(getVlrEmprestado() + valor);
             return getVlrEmprestado();
         } else {
-            return -1; 
+            return -1;
         }
     }
 
@@ -25,7 +26,7 @@ public class ClientePessoa extends Cliente {
             setVlrEmprestado(getVlrEmprestado() - valor);
             return getVlrEmprestado();
         } else {
-            return -1; 
+            return -1;
         }
     }
 
@@ -56,6 +57,6 @@ public class ClientePessoa extends Cliente {
     @Override
     public String toString() {
         return "ClientePessoa [nome = " + getNome() + ", telefone = " + getTelefone() + ", email = " + getEmail() +
-               ", Cpf = " + Cpf + ", Peso = " + Peso + ", Altura = " + Altura + ", saldo = " + getSaldo() + "]";
+                ", Cpf = " + Cpf + ", Peso = " + Peso + ", Altura = " + Altura + ", saldo = " + getSaldo() + "]";
     }
 }
