@@ -1,4 +1,4 @@
-package br.edu.up;
+package br.edu.up.model;
 
 public class Segurado {
     private String Nome;
@@ -67,7 +67,8 @@ public class Segurado {
 
     @Override
     public String toString() {
-        return "Segurado [Nome=" + Nome + ", Rg=" + Rg + ", Cpf=" + Cpf + ", Telefone=" + Telefone + ", Endereco="
-                + Endereco + ", Cep=" + Cep + ", Cidade=" + Cidade + "]";
+        return "Segurado [Nome = " + Nome + ", Rg = " + Rg + ", Cpf = " + Cpf + ", Telefone = " + Telefone
+                + ", Endereco = "
+                + Endereco + ", Cep = " + Cep + ", Cidade = " + Cidade + "]";
     }
 }

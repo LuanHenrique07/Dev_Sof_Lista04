@@ -1,4 +1,4 @@
-package br.edu.up;
+package br.edu.up.model;
 
 public class SeguroVeiculo extends Seguro {
     private double VlrFranquia;
@@ -29,7 +29,10 @@ public class SeguroVeiculo extends Seguro {
         CobreVidros = cobreVidros;
     }
 
+    @Override
     public String getDados() {
-        return "";
+        return "SeguroVeiculo [Valor Franquia = " + VlrFranquia + ", Tem Carro Reserva = " + TemCarroReserva
+                + ", Cobre Vidros = "
+                + CobreVidros + "]";
     }
 }

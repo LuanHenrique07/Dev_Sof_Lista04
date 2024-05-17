@@ -1,4 +1,4 @@
-package br.edu.up;
+package br.edu.up.model;
 
 import java.time.LocalDate;
 
@@ -40,8 +40,13 @@ public abstract class Seguro {
         DtaFim = dtaFim;
     }
 
-    public String getDados() {
-        return "";
+    public abstract String getDados();
+
+    @Override
+    public String toString() {
+        return "Seguro [Apolice = " + Apolice + ", Valor da Apolice = " + VlrApolice + ", Data do Inicio = " + DtaInicio
+                + ", Data do Fim = "
+                + DtaFim + "]";
     }
 
 }

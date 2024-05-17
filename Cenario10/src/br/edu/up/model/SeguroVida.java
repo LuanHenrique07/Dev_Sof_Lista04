@@ -1,4 +1,4 @@
-package br.edu.up;
+package br.edu.up.model;
 
 public class SeguroVida extends Seguro {
     private boolean CobreDoenca;
@@ -20,7 +20,8 @@ public class SeguroVida extends Seguro {
         CobreAcidente = cobreAcidente;
     }
 
+    @Override
     public String getDados() {
-        return "";
+        return "Seguro de Vida [Cobre Doenca? = " + CobreDoenca + ", Cobre Acidente? = " + CobreAcidente + "]";
     }
 }
