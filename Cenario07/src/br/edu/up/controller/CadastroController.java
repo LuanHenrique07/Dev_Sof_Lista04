@@ -1,11 +1,11 @@
-package br.edu.up.controller;
+package br.edu.up.Controller;
 
 import java.util.ArrayList;
 import java.util.List;
-import br.edu.up.*;
+import br.edu.up.View.CadastroView;
 import br.edu.up.model.Aluno;
 import br.edu.up.model.Professor;
-import br.edu.up.view.CadastroView;
+import br.edu.up.Prompt;
 
 public class CadastroController {
     private CadastroView view;
@@ -45,7 +45,7 @@ public class CadastroController {
                     System.out.println("Saindo...");
                     break;
                 default:
-                    view.mostrarMensagem("Opção inválida");
+                    Prompt.imprimir("Opção inválida");
                     break;
             }
         } while (opcao != 7);
@@ -54,13 +54,13 @@ public class CadastroController {
     private void cadastrarProfessor() {
         Professor professor = view.cadastrarProfessor();
         professores.add(professor);
-        view.mostrarMensagem("Professor cadastrado com sucesso");
+        Prompt.imprimir("Professor cadastrado com sucesso");
     }
 
     private void cadastrarAluno() {
         Aluno aluno = view.cadastrarAluno();
         alunos.add(aluno);
-        view.mostrarMensagem("Aluno cadastrado com sucesso");
+        Prompt.imprimir("Aluno cadastrado com sucesso");
     }
 
     private void excluirProfessor() {
@@ -74,9 +74,9 @@ public class CadastroController {
             }
         }
         if (removido) {
-            view.mostrarMensagem("Professor excluído com sucesso");
+            Prompt.imprimir("Professor excluído com sucesso");
         } else {
-            view.mostrarMensagem("Professor não encontrado");
+            Prompt.imprimir("Professor não encontrado");
         }
     }
 
@@ -91,9 +91,9 @@ public class CadastroController {
             }
         }
         if (removido) {
-            view.mostrarMensagem("Aluno excluído com sucesso");
+            Prompt.imprimir("Aluno excluído com sucesso");
         } else {
-            view.mostrarMensagem("Aluno não encontrado");
+            Prompt.imprimir("Aluno não encontrado");
         }
     }
 }

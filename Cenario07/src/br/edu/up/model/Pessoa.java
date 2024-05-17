@@ -1,17 +1,22 @@
 package br.edu.up.model;
 
 public class Pessoa {
-
     private String Nome;
     private String Rg;
     private String Matricula;
+
+    public Pessoa(String nome, String rg, String matricula) {
+        this.Nome = nome;
+        this.Rg = rg;
+        this.Matricula = matricula;
+    }
 
     public String getNome() {
         return Nome;
     }
 
     public void setNome(String nome) {
-        Nome = nome;
+        this.Nome = nome;
     }
 
     public String getRg() {
@@ -19,7 +24,7 @@ public class Pessoa {
     }
 
     public void setRg(String rg) {
-        Rg = rg;
+        this.Rg = rg;
     }
 
     public String getMatricula() {
@@ -27,6 +32,6 @@ public class Pessoa {
     }
 
     public void setMatricula(String matricula) {
-        Matricula = matricula;
+        this.Matricula = matricula;
     }
 }
